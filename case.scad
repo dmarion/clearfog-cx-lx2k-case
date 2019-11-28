@@ -37,11 +37,11 @@ CORNER_POSTS = [[CORNER_POST_SIZE / 2, CORNER_POST_SIZE * 1.5],
 
 FRONT_HOLES = [
     [ 26, 32, 29, "SFP+" ],
-    [ 53, 10, 4, "STM" ],
-    [ 65, 10, 4, "FTDI" ],
+    [ 53, 10, 4, "CON" ],
+    [ 65, 10, 4, "μBMC" ],
     [ 85, 17, 16, "ETH" ],
     [ 107, 15.5, 18, "USB" ],
-    [ 127, 16, 4, "mSD" ],
+    [ 127, 16, 4, "μSD" ],
     [ 147, 22, 13, "QSFP28" ],
 ];
 
@@ -219,9 +219,9 @@ face()
         translate([ s / 2 + a[0], PCB_HEIGHT + a[2] + 2, t ])
             linear_extrude(height = 1) text(a[3],
                                             font = f,
-                                            size = 3.2,
+                                            size = 3,
                                             halign = "center",
-                                            valign = "bottom",
+                                            valign = "baseline",
                                             $fn = 12);
 
     a = FRONT_HOLES[0];
